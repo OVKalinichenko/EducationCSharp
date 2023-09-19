@@ -6,6 +6,14 @@ int number = Convert.ToInt32(Console.ReadLine());
 int count = 2;
 while(count <= number)
 {
-   System.Console.Write ($"{count}, ");
-   count++;
+   if(count % 2 == 0)
+   {
+      System.Console.Write ($"{count}, ");
+      count++;  
+   }
+   else
+   {
+      count++;  
+   }
+   
 }
