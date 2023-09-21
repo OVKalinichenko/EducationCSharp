@@ -27,6 +27,11 @@ void ThirdDigit(int num)
                 count = count * 10;
             }
         }
+        while(num >= 1000000000)
+        {
+            System.Console.WriteLine((num / 10000000) % 10);
+            break;
+        }
     }
 }
 
