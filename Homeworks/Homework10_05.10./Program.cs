@@ -65,6 +65,24 @@ double[] CrossPoint(double k1, double k2, double b1, double b2)
     cross[1] = k1 * cross[0] + b1;
     return cross;
 }
+bool PossibilityOfCrossPoint(double k1, double k2, double b1, double b2)
+{
+    if (k1 == k2)
+    {
+        if (b1 == b2)
+        {
+            System.Console.WriteLine("Lines coincide");
+            return false;
+        }
+        else
+        {
+            System.Console.WriteLine("Lines are paralles");
+            return false;  
+        }    
+    }
+    else return true;
+}
+
 void PrintArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -87,6 +105,7 @@ double numb1 = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Enter b2: ");
 double numb2 = Convert.ToInt32(Console.ReadLine());
 
+PossibilityOfCrossPoint(numk1, numk2, numb1, numb2);
 double[] point = CrossPoint(numk1, numk2, numb1, numb2);
 
 System.Console.Write("(");
