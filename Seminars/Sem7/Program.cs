@@ -60,13 +60,13 @@
 
 // void FillArrayWithFormul(int[,] array)
 // {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             array[i, j] = i + j;
-//         }
-//     }
+    // for (int i = 0; i < array.GetLength(0); i++)
+    // {
+    //     for (int j = 0; j < array.GetLength(1); j++)
+    //     {
+    //         array[i, j] = i + j;
+    //     }
+    // }
 // }
 
 // void Print2DArray(int[,] array)
@@ -104,26 +104,26 @@
 
 // void Fill2DArray(int[,] array, int minValue, int maxValue)
 // {
-//     Random random = new Random();
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             array[i, j] = random.Next(minValue, maxValue + 1);
-//         }
-//     }
+    // Random random = new Random();
+    // for (int i = 0; i < array.GetLength(0); i++)
+    // {
+    //     for (int j = 0; j < array.GetLength(1); j++)
+    //     {
+    //         array[i, j] = random.Next(minValue, maxValue + 1);
+    //     }
+    // }
 // }
 
 // void Print2DArray(int[,] array)
 // {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             System.Console.Write($"{array[i, j]}\t"); ;
-//         }
-//         System.Console.WriteLine();
-//     }
+    // for (int i = 0; i < array.GetLength(0); i++)
+    // {
+    //     for (int j = 0; j < array.GetLength(1); j++)
+    //     {
+    //         System.Console.Write($"{array[i, j]}\t"); ;
+    //     }
+    //     System.Console.WriteLine();
+    // }
 // }
 
 // void ChangeArray(int[,] array)
