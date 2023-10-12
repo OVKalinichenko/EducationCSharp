@@ -13,9 +13,9 @@ int[,] CreateIncreasingMatrix(int n, int m, int k)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = value;
-            value += 2;
+            value += k;
         }
-        value = 1 + 2 * m * (i + 1);
+        value = 1 + k * m * (i + 1);
     }
     return matrix;
 }
@@ -69,14 +69,14 @@ void PrintListAvr (double [] list)
     for (int i = 0; i < list.Length; i++)
     {
         
-        System.Console.Write($"{list[i]:f2}\t ");
+        System.Console.Write($"{list[i]:f2}\t");
     }
 }
 
 double [] FindAverageInColumns (int [,] matrix)
     { 
     double[] list = new double[matrix.GetLength(1)];
-    for (int j = 0; j < matrix.GetLength(0); j++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
         int averageColumn = 0;
         int sumColumn = 0;
@@ -90,7 +90,7 @@ double [] FindAverageInColumns (int [,] matrix)
     return list;
     }
 
-int[,] matr = CreateIncreasingMatrix(3, 4, 2);
+int[,] matr = CreateIncreasingMatrix(5, 4, 3);
 PrintArray(matr);
 
 System.Console.WriteLine("Enter number of rows: ");
