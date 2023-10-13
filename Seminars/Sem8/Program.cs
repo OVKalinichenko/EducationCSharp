@@ -39,8 +39,8 @@ void ChangeRows(int[,] array, int row1, int row2)
     for (int j = 0; j < array.GetLength(1); j++)
     {
         int temp = array[row1, j];
-        array[row1, j] = array[row2,j];
-        array[row2,j] = temp;
+        array[row1, j] = array[row2, j];
+        array[row2, j] = temp;
     }
 }
 
@@ -76,9 +76,9 @@ void RowsToColumns(int[,] array)
         {
             for (int j = i + 1; j < array.GetLength(1); j++)
             {
-                int temp = array[i,j];
-                array[i,j] =array[j,i];
-                array[j,i]= temp;
+                int temp = array[i, j];
+                array[i, j] = array[j, i];
+                array[j, i] = temp;
             }
         }
     }
@@ -91,16 +91,16 @@ void RowsToColumns(int[,] array)
 
 void DeleteRowColonmMin(int[,] array)
 {
-    int min = array[0,0];
+    int min = array[0, 0];
     int minI = 0;
     int minJ = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if( array[i, j] < min)
+            if (array[i, j] < min)
             {
-                min = array[i,j];
+                min = array[i, j];
                 minI = i;
                 minJ = j;
 
@@ -109,11 +109,11 @@ void DeleteRowColonmMin(int[,] array)
     }
     for (int i = 0; i < array.GetLength(0); i++)
     {
-      array[i, minJ] = 0;
+        array[i, minJ] = 0;
     }
     for (int j = 0; j < array.GetLength(1); j++)
     {
-      array[minI, j] = 0;
+        array[minI, j] = 0;
     }
 }
 
