@@ -1,4 +1,4 @@
-﻿// Задание 1. Задайте значение N. Напищите программу, которая выведет все натуральные числа в 
+﻿// ===== Задание 1. Задайте значение N. Напищите программу, которая выведет все натуральные числа в 
 // промежутке от 1 до N
 
 // void ShowNums(int n)
@@ -12,7 +12,7 @@
 // ShowNums(10);
 
 
-// Задание2. Напишите программу, которая на вход принимала число и возвращает 
+// ===== Задание2. Напишите программу, которая на вход принимала число и возвращает 
 // сумму всех цифр числа
 
 // int FindSum(int num)
@@ -28,35 +28,36 @@
 // Задание 3. Задайте значение M и N. Напишите программу, котороая выведет все натуральные 
 // числа в промежутке от n до m
 
-// void FindDeaposon(int m, int n)
-// {
-//     if (m != n)
-//     {
-//         if (m > n)
-//         {
-//             FindDeaposon(m - 1, n);
-//             System.Console.Write(m + " ");
-//         }
-//         else
-//         {
-//             FindDeaposon(m, n - 1);
-//             System.Console.Write(n + " ");
-//         }
-//     }
-// }
-
-// FindDeaposon(8, 5);
-
-// Задание 4. Напишите программу, которая на вход принимает два числа 
-// А и В и возводит число А в степень В.
-
-int FindPowerOfNumber(int a, int b)
+void FindDeaposon(int m, int n)
 {
-    if (b > 0)
+    if (m != n)
     {
-        return FindPowerOfNumber(a, b - 1) * a;
+        if (m > n)
+        {
+            FindDeaposon(m - 1, n);
+        }
+        else
+        {
+            FindDeaposon(m, n - 1);
+        }
     }
-    else return 1;
+    System.Console.Write(m + " ");
 }
 
-System.Console.WriteLine(FindPowerOfNumber(5, 5));
+FindDeaposon(8, 5);
+
+// ===== Задание 4. Напишите программу, которая на вход принимает два числа 
+// А и В и возводит число А в степень В.
+
+// int FindPowerOfNumber(int a, int b)
+// {
+//     if (b > 0)
+//     {
+//         return FindPowerOfNumber(a, b - 1) * a;
+//     }
+//     else return 1;
+// }
+
+// System.Console.WriteLine(FindPowerOfNumber(5, 5));
+
+// !!!!!! Рекурсия идет туда и обратно возвращает результат. Все идет по этапно.
